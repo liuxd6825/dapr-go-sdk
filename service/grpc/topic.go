@@ -23,8 +23,8 @@ import (
 
 	"github.com/golang/protobuf/ptypes/empty"
 
-	"github.com/dapr/go-sdk/service/common"
-	"github.com/dapr/go-sdk/service/internal"
+	"github.com/liuxd6825/dapr-go-sdk/service/common"
+	"github.com/liuxd6825/dapr-go-sdk/service/internal"
 	runtimev1pb "github.com/liuxd6825/dapr/pkg/proto/runtime/v1"
 )
 

@@ -20,8 +20,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	actorErr "github.com/dapr/go-sdk/actor/error"
-	actorMock "github.com/dapr/go-sdk/actor/mock"
+	actorErr "github.com/liuxd6825/dapr-go-sdk/actor/error"
+	actorMock "github.com/liuxd6825/dapr-go-sdk/actor/mock"
 )
 
 const mockActorID = "mockActorID"

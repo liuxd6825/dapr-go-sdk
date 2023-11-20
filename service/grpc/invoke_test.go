@@ -23,7 +23,7 @@ import (
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/protobuf/types/known/anypb"
 
-	cc "github.com/dapr/go-sdk/service/common"
+	cc "github.com/liuxd6825/dapr-go-sdk/service/common"
 )
 
 func testInvokeHandler(ctx context.Context, in *cc.InvocationEvent) (out *cc.Content, err error) {

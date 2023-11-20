@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/dapr/go-sdk/service/internal"
+	"github.com/liuxd6825/dapr-go-sdk/service/internal"
 )
 
 func TestTopicSubscripiton(t *testing.T) {

@@ -22,7 +22,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	dapr "github.com/dapr/go-sdk/client"
+	dapr "github.com/liuxd6825/dapr-go-sdk/client"
 )
 
 func GetEnvValue(key, fallback string) string {

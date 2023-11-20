@@ -13,7 +13,7 @@ limitations under the License.
 
 package config
 
-import "github.com/dapr/go-sdk/actor/codec/constant"
+import "github.com/liuxd6825/dapr-go-sdk/actor/codec/constant"
 
 // ActorConfig is Actor's configuration struct.
 type ActorConfig struct {

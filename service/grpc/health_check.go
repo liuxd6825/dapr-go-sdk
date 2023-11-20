@@ -17,7 +17,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/dapr/go-sdk/service/common"
+	"github.com/liuxd6825/dapr-go-sdk/service/common"
 	pb "github.com/liuxd6825/dapr/pkg/proto/runtime/v1"
 
 	"google.golang.org/protobuf/types/known/emptypb"

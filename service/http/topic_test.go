@@ -28,10 +28,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/dapr/go-sdk/actor/api"
-	"github.com/dapr/go-sdk/actor/mock"
-	"github.com/dapr/go-sdk/service/common"
-	"github.com/dapr/go-sdk/service/internal"
+	"github.com/liuxd6825/dapr-go-sdk/actor/api"
+	"github.com/liuxd6825/dapr-go-sdk/actor/mock"
+	"github.com/liuxd6825/dapr-go-sdk/service/common"
+	"github.com/liuxd6825/dapr-go-sdk/service/internal"
 )
 
 func testTopicFunc(ctx context.Context, e *common.TopicEvent) (retry bool, err error) {

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/dapr/go-sdk/service/common"
+	"github.com/liuxd6825/dapr-go-sdk/service/common"
 )
 
 // TopicRegistrar is a map of <pubsubname>-<topic> to `TopicRegistration`

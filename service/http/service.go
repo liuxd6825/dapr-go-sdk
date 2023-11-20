@@ -19,13 +19,11 @@ import (
 	"os"
 	"time"
 
-	"github.com/go-chi/chi/v5"
-
-	"github.com/dapr/go-sdk/actor"
-	"github.com/dapr/go-sdk/actor/config"
-	"github.com/dapr/go-sdk/actor/runtime"
-	"github.com/dapr/go-sdk/service/common"
-	"github.com/dapr/go-sdk/service/internal"
+	"github.com/liuxd6825/dapr-go-sdk/actor"
+	"github.com/liuxd6825/dapr-go-sdk/actor/config"
+	"github.com/liuxd6825/dapr-go-sdk/actor/runtime"
+	"github.com/liuxd6825/dapr-go-sdk/service/common"
+	"github.com/liuxd6825/dapr-go-sdk/service/internal"
 )
 
 // NewService creates new Service.

@@ -1,7 +1,7 @@
 # Hello World with Unix domain socket
 
 This tutorial will demonstrate how to instrument your application with Dapr, and run it locally on your machine.
-You will deploying advanced `order` applications with [Unix domain socket](https://en.wikipedia.org/wiki/Unix_domain_socket) based on [Hello World](https://github.com/dapr/go-sdk/tree/main/examples/hello-world).
+You will deploying advanced `order` applications with [Unix domain socket](https://en.wikipedia.org/wiki/Unix_domain_socket) based on [Hello World](https://github.com/liuxd6825/dapr-go-sdk/tree/main/examples/hello-world).
 
 There is a great performance imporvement With Unix domain socket, please notice that it does not support on Windows.
 

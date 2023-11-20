@@ -16,8 +16,8 @@ package common
 import (
 	"context"
 
-	"github.com/dapr/go-sdk/actor"
-	"github.com/dapr/go-sdk/actor/config"
+	"github.com/liuxd6825/dapr-go-sdk/actor"
+	"github.com/liuxd6825/dapr-go-sdk/actor/config"
 )
 
 const (

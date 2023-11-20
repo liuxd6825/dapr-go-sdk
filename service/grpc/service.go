@@ -22,10 +22,10 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/dapr/go-sdk/actor"
-	"github.com/dapr/go-sdk/actor/config"
-	"github.com/dapr/go-sdk/service/common"
-	"github.com/dapr/go-sdk/service/internal"
+	"github.com/liuxd6825/dapr-go-sdk/actor"
+	"github.com/liuxd6825/dapr-go-sdk/actor/config"
+	"github.com/liuxd6825/dapr-go-sdk/service/common"
+	"github.com/liuxd6825/dapr-go-sdk/service/internal"
 	pb "github.com/liuxd6825/dapr/pkg/proto/runtime/v1"
 )
 

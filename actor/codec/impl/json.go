@@ -16,8 +16,8 @@ package impl
 import (
 	"encoding/json"
 
-	"github.com/dapr/go-sdk/actor/codec"
-	"github.com/dapr/go-sdk/actor/codec/constant"
+	"github.com/liuxd6825/dapr-go-sdk/actor/codec"
+	"github.com/liuxd6825/dapr-go-sdk/actor/codec/constant"
 )
 
 func init() {

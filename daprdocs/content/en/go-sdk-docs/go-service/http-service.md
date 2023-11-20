@@ -11,7 +11,7 @@ no_list: true
 Start by importing Dapr Go service/http package:
 
 ```go
-daprd "github.com/dapr/go-sdk/service/http"
+daprd "github.com/liuxd6825/dapr-go-sdk/service/http"
 ```
 
 ### Creating and Starting Service
@@ -121,4 +121,4 @@ func runHandler(ctx context.Context, in *common.BindingEvent) (out []byte, err e
 }
 ```
 ## Related links
-- [Go SDK Examples](https://github.com/dapr/go-sdk/tree/main/examples)
+- [Go SDK Examples](https://github.com/liuxd6825/dapr-go-sdk/tree/main/examples)

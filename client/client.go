@@ -27,9 +27,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/dapr/go-sdk/actor"
-	"github.com/dapr/go-sdk/actor/config"
-	"github.com/dapr/go-sdk/version"
+	"github.com/liuxd6825/dapr-go-sdk/actor"
+	"github.com/liuxd6825/dapr-go-sdk/actor/config"
+	"github.com/liuxd6825/dapr-go-sdk/version"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
@@ -40,7 +40,7 @@ import (
 	pb "github.com/liuxd6825/dapr/pkg/proto/runtime/v1"
 
 	// used to import codec implements.
-	_ "github.com/dapr/go-sdk/actor/codec/impl"
+	_ "github.com/liuxd6825/dapr-go-sdk/actor/codec/impl"
 )
 
 const (
@@ -209,6 +209,43 @@ type Client interface {
 
 	// GrpcClient returns the base grpc client if grpc is used and nil otherwise
 	GrpcClient() pb.DaprClient
+
+	// LoadEvents  加载事件
+	LoadEvents(context.Context, *pb.LoadEventRequest) (*pb.LoadEventResponse, error)
+
+	// SaveSnapshot 保存事件快照
+	SaveSnapshot(context.Context, *pb.SaveSnapshotRequest) (*pb.SaveSnapshotResponse, error)
+
+	// Commit 提交事务
+	Commit(context.Context, *pb.CommitRequest) (*pb.CommitResponse, error)
+
+	// Rollback 回滚事务
+	Rollback(context.Context, *pb.RollbackRequest) (*pb.RollbackResponse, error)
+
+	// ApplyEvent 应用事件到聚合根上
+	ApplyEvent(context.Context, *pb.ApplyEventRequest) (*pb.ApplyEventResponse, error)
+
+	// WriteEventLog 写事件日志
+	WriteEventLog(context.Context, *pb.WriteEventLogRequest) (*pb.WriteEventLogResponse, error)
+
+	// UpdateEventLog 更新事件日志
+	UpdateEventLog(context.Context, *pb.UpdateEventLogRequest) (*pb.UpdateEventLogResponse, error)
+
+	// GetEventLogByCommandId 按命令id获取事件日志
+	GetEventLogByCommandId(context.Context, *pb.GetEventLogByCommandIdRequest) (*pb.GetEventLogByCommandIdResponse, error)
+
+	// WriteAppLog 写应用日志
+	WriteAppLog(context.Context, *pb.WriteAppLogRequest) (*pb.WriteAppLogResponse, error)
+
+	// UpdateAppLog 更新应用日志
+	UpdateAppLog(context.Context, *pb.UpdateAppLogRequest) (*pb.UpdateAppLogResponse, error)
+
+	// GetAppLogById 按id获取应用日志
+	GetAppLogById(context.Context, *pb.GetAppLogByIdRequest) (*pb.GetAppLogByIdResponse, error)
+
+	GetRelations(ctx context.Context, request *pb.GetRelationsRequest) (*pb.GetRelationsResponse, error)
+
+	GetEvents(ctx context.Context, request *pb.GetEventsRequest) (*pb.GetEventsResponse, error)
 }
 
 // NewClient instantiates Dapr client using DAPR_GRPC_PORT environment variable as port.

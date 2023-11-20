@@ -18,7 +18,7 @@ The Dapr client package allows you to interact with other Dapr applications from
 
 ## Import the client package 
 ```go
-import "github.com/dapr/go-sdk/client"
+import "github.com/liuxd6825/dapr-go-sdk/client"
 ```
 
 ## Building blocks
@@ -343,7 +343,7 @@ package main
 import (
     "fmt"
 
-    dapr "github.com/dapr/go-sdk/client"
+    dapr "github.com/liuxd6825/dapr-go-sdk/client"
 )
 
 func main() {
@@ -428,4 +428,4 @@ out, err := sdkClient.Decrypt(context.Background(), rf, dapr.EncryptOptions{
 For a full guide on cryptography, visit [How-To: Use the cryptography APIs]({{< ref howto-cryptography.md >}}).
 
 ## Related links
-[Go SDK Examples](https://github.com/dapr/go-sdk/tree/main/examples)
+[Go SDK Examples](https://github.com/liuxd6825/dapr-go-sdk/tree/main/examples)

@@ -23,10 +23,10 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/dapr/go-sdk/actor"
-	"github.com/dapr/go-sdk/actor/api"
-	"github.com/dapr/go-sdk/actor/codec"
-	actorErr "github.com/dapr/go-sdk/actor/error"
+	"github.com/liuxd6825/dapr-go-sdk/actor"
+	"github.com/liuxd6825/dapr-go-sdk/actor/api"
+	"github.com/liuxd6825/dapr-go-sdk/actor/codec"
+	actorErr "github.com/liuxd6825/dapr-go-sdk/actor/error"
 )
 
 type ActorManager interface {

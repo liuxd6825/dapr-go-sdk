@@ -20,12 +20,10 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/go-chi/chi/v5"
-
-	actorErr "github.com/dapr/go-sdk/actor/error"
-	"github.com/dapr/go-sdk/actor/runtime"
-	"github.com/dapr/go-sdk/service/common"
-	"github.com/dapr/go-sdk/service/internal"
+	actorErr "github.com/liuxd6825/dapr-go-sdk/actor/error"
+	"github.com/liuxd6825/dapr-go-sdk/actor/runtime"
+	"github.com/liuxd6825/dapr-go-sdk/service/common"
+	"github.com/liuxd6825/dapr-go-sdk/service/internal"
 )
 
 const (

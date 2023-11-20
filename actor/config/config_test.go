@@ -16,7 +16,7 @@ package config
 import (
 	"testing"
 
-	"github.com/dapr/go-sdk/actor/codec/constant"
+	"github.com/liuxd6825/dapr-go-sdk/actor/codec/constant"
 
 	"github.com/stretchr/testify/assert"
 )

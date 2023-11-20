@@ -3,7 +3,7 @@
 Start by importing Dapr Go `service/http` package:
 
 ```go
-daprd "github.com/dapr/go-sdk/service/http"
+daprd "github.com/liuxd6825/dapr-go-sdk/service/http"
 ```
 
 ## Creating and Starting Service 

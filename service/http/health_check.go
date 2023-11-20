@@ -18,7 +18,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/dapr/go-sdk/service/common"
+	"github.com/liuxd6825/dapr-go-sdk/service/common"
 )
 
 // AddHealthCheckHandler appends provided app health check handler.

@@ -18,11 +18,11 @@ import (
 	"log"
 	"reflect"
 
-	"github.com/dapr/go-sdk/actor"
-	"github.com/dapr/go-sdk/actor/codec"
-	actorErr "github.com/dapr/go-sdk/actor/error"
-	"github.com/dapr/go-sdk/actor/state"
-	dapr "github.com/dapr/go-sdk/client"
+	"github.com/liuxd6825/dapr-go-sdk/actor"
+	"github.com/liuxd6825/dapr-go-sdk/actor/codec"
+	actorErr "github.com/liuxd6825/dapr-go-sdk/actor/error"
+	"github.com/liuxd6825/dapr-go-sdk/actor/state"
+	dapr "github.com/liuxd6825/dapr-go-sdk/client"
 )
 
 // Deprecated: use ActorContainerContext instead.

@@ -23,7 +23,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/dapr/go-sdk/service/common"
+	"github.com/liuxd6825/dapr-go-sdk/service/common"
 )
 
 func TestBindingHandlerWithoutHandler(t *testing.T) {

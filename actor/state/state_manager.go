@@ -21,7 +21,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/dapr/go-sdk/actor"
+	"github.com/liuxd6825/dapr-go-sdk/actor"
 )
 
 type stateManager struct {

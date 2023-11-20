@@ -19,8 +19,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/dapr/go-sdk/service/common"
-	daprd "github.com/dapr/go-sdk/service/http"
+	"github.com/liuxd6825/dapr-go-sdk/service/common"
+	daprd "github.com/liuxd6825/dapr-go-sdk/service/http"
 )
 
 func main() {

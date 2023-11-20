@@ -6,8 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	dapr "github.com/dapr/go-sdk/client"
-	"github.com/go-redis/redis/v8"
+	dapr "github.com/liuxd6825/dapr-go-sdk/client"
 	"google.golang.org/grpc/metadata"
 )
 

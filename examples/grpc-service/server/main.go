@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	daprd "github.com/dapr/go-sdk/service/grpc"
+	daprd "github.com/liuxd6825/dapr-go-sdk/service/grpc"
 	"google.golang.org/grpc"
 	pb "google.golang.org/grpc/examples/helloworld/helloworld"
 )

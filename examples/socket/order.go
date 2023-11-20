@@ -6,8 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	dapr "github.com/dapr/go-sdk/client"
-	"gopkg.in/alecthomas/kingpin.v2"
+	dapr "github.com/liuxd6825/dapr-go-sdk/client"
 )
 
 const (

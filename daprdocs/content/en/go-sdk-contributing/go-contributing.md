@@ -6,7 +6,7 @@ weight: 3000
 description: Guidelines for contributing to the Dapr Go SDK
 ---
 
-When contributing to the [Go SDK](https://github.com/dapr/go-sdk) the following rules and best-practices should be followed.
+When contributing to the [Go SDK](https://github.com/liuxd6825/dapr-go-sdk) the following rules and best-practices should be followed.
 
 ## Examples
 
