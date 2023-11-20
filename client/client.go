@@ -37,7 +37,7 @@ import (
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/protobuf/types/known/emptypb"
 
-	pb "github.com/dapr/dapr/pkg/proto/runtime/v1"
+	pb "github.com/liuxd6825/dapr/pkg/proto/runtime/v1"
 
 	// used to import codec implements.
 	_ "github.com/dapr/go-sdk/actor/codec/impl"

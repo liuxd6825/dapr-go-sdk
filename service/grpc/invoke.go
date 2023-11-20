@@ -21,8 +21,8 @@ import (
 	"github.com/golang/protobuf/ptypes/any"
 	"google.golang.org/grpc/metadata"
 
-	cpb "github.com/dapr/dapr/pkg/proto/common/v1"
 	cc "github.com/dapr/go-sdk/service/common"
+	cpb "github.com/liuxd6825/dapr/pkg/proto/common/v1"
 )
 
 // AddServiceInvocationHandler appends provided service invocation handler with its method to the service.

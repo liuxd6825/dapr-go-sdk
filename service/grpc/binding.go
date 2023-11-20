@@ -20,8 +20,8 @@ import (
 
 	"github.com/golang/protobuf/ptypes/empty"
 
-	pb "github.com/dapr/dapr/pkg/proto/runtime/v1"
 	"github.com/dapr/go-sdk/service/common"
+	pb "github.com/liuxd6825/dapr/pkg/proto/runtime/v1"
 )
 
 // AddBindingInvocationHandler appends provided binding invocation handler with its name to the service.

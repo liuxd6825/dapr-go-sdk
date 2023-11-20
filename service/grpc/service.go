@@ -22,11 +22,11 @@ import (
 
 	"google.golang.org/grpc"
 
-	pb "github.com/dapr/dapr/pkg/proto/runtime/v1"
 	"github.com/dapr/go-sdk/actor"
 	"github.com/dapr/go-sdk/actor/config"
 	"github.com/dapr/go-sdk/service/common"
 	"github.com/dapr/go-sdk/service/internal"
+	pb "github.com/liuxd6825/dapr/pkg/proto/runtime/v1"
 )
 
 // NewService creates new Service.

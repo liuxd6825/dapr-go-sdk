@@ -7,7 +7,7 @@ import (
 
 	"google.golang.org/protobuf/types/known/emptypb"
 
-	pb "github.com/dapr/dapr/pkg/proto/runtime/v1"
+	pb "github.com/liuxd6825/dapr/pkg/proto/runtime/v1"
 )
 
 type GetMetadataResponse struct {

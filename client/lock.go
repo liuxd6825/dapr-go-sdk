@@ -18,7 +18,7 @@ import (
 	"errors"
 	"fmt"
 
-	pb "github.com/dapr/dapr/pkg/proto/runtime/v1"
+	pb "github.com/liuxd6825/dapr/pkg/proto/runtime/v1"
 )
 
 // LockRequest is the lock request object.

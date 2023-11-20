@@ -37,7 +37,7 @@ Before you file an issue, make sure you've checked the following:
         - 👍 up-vote
         - 👎 down-vote
 1. For proposals
-    - Some changes to the Dapr Go SDK may require changes to the API. In that case, the best place to discuss the potential feature is the main [Dapr repo](https://github.com/dapr/dapr).
+    - Some changes to the Dapr Go SDK may require changes to the API. In that case, the best place to discuss the potential feature is the main [Dapr repo](https://github.com/liuxd6825/dapr).
     - Other examples could include bindings, state stores or entirely new components.
 
 ## Contributing to Dapr Go SDK

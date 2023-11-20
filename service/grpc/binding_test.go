@@ -21,8 +21,8 @@ import (
 	"github.com/golang/protobuf/ptypes/empty"
 	"github.com/stretchr/testify/assert"
 
-	runtime "github.com/dapr/dapr/pkg/proto/runtime/v1"
 	"github.com/dapr/go-sdk/service/common"
+	runtime "github.com/liuxd6825/dapr/pkg/proto/runtime/v1"
 )
 
 func testBindingHandler(ctx context.Context, in *common.BindingEvent) (out []byte, err error) {
