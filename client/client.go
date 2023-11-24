@@ -59,6 +59,8 @@ var (
 	lock                 = &sync.Mutex{}
 	_             Client = (*GRPCClient)(nil)
 	defaultClient Client
+
+	DefaultMaxCallRecvMsgSize = 40
 )
 
 // Client is the interface for Dapr client implementation.
@@ -210,29 +212,35 @@ type Client interface {
 	// GrpcClient returns the base grpc client if grpc is used and nil otherwise
 	GrpcClient() pb.DaprClient
 
-	// LoadEvents  加载事件
-	LoadEvents(context.Context, *pb.LoadEventRequest) (*pb.LoadEventResponse, error)
+	// LoadDomainEvents  加载事件
+	LoadDomainEvents(context.Context, *pb.LoadDomainEventRequest) (*pb.LoadDomainEventResponse, error)
 
-	// SaveSnapshot 保存事件快照
-	SaveSnapshot(context.Context, *pb.SaveSnapshotRequest) (*pb.SaveSnapshotResponse, error)
+	// SaveDomainEventSnapshot 保存事件快照
+	SaveDomainEventSnapshot(context.Context, *pb.SaveDomainEventSnapshotRequest) (*pb.SaveDomainEventSnapshotResponse, error)
 
-	// Commit 提交事务
-	Commit(context.Context, *pb.CommitRequest) (*pb.CommitResponse, error)
+	// CommitDomainEvents 提交事务
+	CommitDomainEvents(context.Context, *pb.CommitDomainEventsRequest) (*pb.CommitDomainEventsResponse, error)
 
-	// Rollback 回滚事务
-	Rollback(context.Context, *pb.RollbackRequest) (*pb.RollbackResponse, error)
+	// RollbackDomainEvents 回滚事务
+	RollbackDomainEvents(context.Context, *pb.RollbackDomainEventsRequest) (*pb.RollbackDomainEventsResponse, error)
 
-	// ApplyEvent 应用事件到聚合根上
-	ApplyEvent(context.Context, *pb.ApplyEventRequest) (*pb.ApplyEventResponse, error)
+	// ApplyDomainEvent 应用事件到聚合根上
+	ApplyDomainEvent(context.Context, *pb.ApplyDomainEventRequest) (*pb.ApplyDomainEventResponse, error)
 
-	// WriteEventLog 写事件日志
-	WriteEventLog(context.Context, *pb.WriteEventLogRequest) (*pb.WriteEventLogResponse, error)
+	// GetDomainEventRelations 取得领域事件关系
+	GetDomainEventRelations(ctx context.Context, request *pb.GetDomainEventRelationsRequest) (*pb.GetDomainEventRelationsResponse, error)
 
-	// UpdateEventLog 更新事件日志
-	UpdateEventLog(context.Context, *pb.UpdateEventLogRequest) (*pb.UpdateEventLogResponse, error)
+	// GetDomainEvents  取得领域事件
+	GetDomainEvents(ctx context.Context, request *pb.GetDomainEventsRequest) (*pb.GetDomainEventsResponse, error)
 
-	// GetEventLogByCommandId 按命令id获取事件日志
-	GetEventLogByCommandId(context.Context, *pb.GetEventLogByCommandIdRequest) (*pb.GetEventLogByCommandIdResponse, error)
+	// WriteAppEventLog 写事件日志
+	WriteAppEventLog(context.Context, *pb.WriteAppEventLogRequest) (*pb.WriteAppEventLogResponse, error)
+
+	// UpdateAppEventLog 更新事件日志
+	UpdateAppEventLog(context.Context, *pb.UpdateAppEventLogRequest) (*pb.UpdateAppEventLogResponse, error)
+
+	// GetAppEventLogByCommandId 按命令id获取事件日志
+	GetAppEventLogByCommandId(context.Context, *pb.GetAppEventLogByCommandIdRequest) (*pb.GetAppEventLogByCommandIdResponse, error)
 
 	// WriteAppLog 写应用日志
 	WriteAppLog(context.Context, *pb.WriteAppLogRequest) (*pb.WriteAppLogResponse, error)
@@ -242,10 +250,6 @@ type Client interface {
 
 	// GetAppLogById 按id获取应用日志
 	GetAppLogById(context.Context, *pb.GetAppLogByIdRequest) (*pb.GetAppLogByIdResponse, error)
-
-	GetRelations(ctx context.Context, request *pb.GetRelationsRequest) (*pb.GetRelationsResponse, error)
-
-	GetEvents(ctx context.Context, request *pb.GetEventsRequest) (*pb.GetEventsResponse, error)
 }
 
 // NewClient instantiates Dapr client using DAPR_GRPC_PORT environment variable as port.
@@ -332,6 +336,7 @@ func NewClientWithAddressContext(ctx context.Context, address string, opts ...Cl
 		option,
 		grpc.WithUserAgent(userAgent()),
 		grpc.WithBlock(),
+		grpc.WithDefaultCallOptions(grpc.MaxCallRecvMsgSize(1024*12024*DefaultMaxCallRecvMsgSize)),
 	)
 	cancel()
 	if err != nil {

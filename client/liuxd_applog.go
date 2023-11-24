@@ -5,16 +5,16 @@ import (
 	pb "github.com/liuxd6825/dapr/pkg/proto/runtime/v1"
 )
 
-func (c *GRPCClient) WriteEventLog(ctx context.Context, in *pb.WriteEventLogRequest) (*pb.WriteEventLogResponse, error) {
-	return c.protoClient.WriteEventLog(c.withAuthToken(ctx), in)
+func (c *GRPCClient) WriteAppEventLog(ctx context.Context, in *pb.WriteAppEventLogRequest) (*pb.WriteAppEventLogResponse, error) {
+	return c.protoClient.WriteAppEventLog(c.withAuthToken(ctx), in)
 }
 
-func (c *GRPCClient) UpdateEventLog(ctx context.Context, in *pb.UpdateEventLogRequest) (*pb.UpdateEventLogResponse, error) {
-	return c.protoClient.UpdateEventLog(c.withAuthToken(ctx), in)
+func (c *GRPCClient) UpdateAppEventLog(ctx context.Context, in *pb.UpdateAppEventLogRequest) (*pb.UpdateAppEventLogResponse, error) {
+	return c.protoClient.UpdateAppEventLog(c.withAuthToken(ctx), in)
 }
 
-func (c *GRPCClient) GetEventLogByCommandId(ctx context.Context, in *pb.GetEventLogByCommandIdRequest) (*pb.GetEventLogByCommandIdResponse, error) {
-	return c.protoClient.GetEventLogByCommandId(c.withAuthToken(ctx), in)
+func (c *GRPCClient) GetAppEventLogByCommandId(ctx context.Context, in *pb.GetAppEventLogByCommandIdRequest) (*pb.GetAppEventLogByCommandIdResponse, error) {
+	return c.protoClient.GetAppEventLogByCommandId(c.withAuthToken(ctx), in)
 }
 
 func (c *GRPCClient) WriteAppLog(ctx context.Context, in *pb.WriteAppLogRequest) (*pb.WriteAppLogResponse, error) {

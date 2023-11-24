@@ -1,6 +1,8 @@
 module github.com/liuxd6825/dapr-go-sdk/examples/hello-world
 
-go 1.20
+go 1.21
+
+toolchain go1.21.4
 
 // Needed to validate SDK changes in CI/CD
 replace github.com/liuxd6825/dapr-go-sdk => ../../

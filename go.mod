@@ -1,6 +1,8 @@
 module github.com/liuxd6825/dapr-go-sdk
 
-go 1.20
+go 1.21
+
+toolchain go1.21.4
 
 require (
 	github.com/golang/mock v1.6.0
@@ -10,6 +12,7 @@ require (
 	github.com/stretchr/testify v1.8.4
 	google.golang.org/grpc v1.57.1
 	google.golang.org/protobuf v1.31.0
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
@@ -21,10 +24,8 @@ require (
 	golang.org/x/text v0.14.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230807174057-1744710a1577 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-//replace github.com/liuxd6825/components-contrib => gitee.com/liuxd6825/components-contrib v1.7.1-1.0-alaph2
 replace github.com/liuxd6825/dapr-components-contrib => ../dapr-components-contrib
 
 replace github.com/liuxd6825/dapr => ../dapr
