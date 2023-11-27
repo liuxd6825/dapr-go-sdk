@@ -131,6 +131,11 @@ func (r *ActorRunTime) RegisterActorFactory(f actor.Factory, opt ...config.Optio
 }
 
 // Deprecated: use ActorRunTimeContext instead.
+func (r *ActorRunTime) RegisterActorFactoryContext(f actor.FactoryContext, opt ...config.Option) {
+	r.ctx.RegisterActorFactory(f, opt...)
+}
+
+// Deprecated: use ActorRunTimeContext instead.
 func (r *ActorRunTime) GetJSONSerializedConfig() ([]byte, error) {
 	return r.ctx.GetJSONSerializedConfig()
 }
