@@ -250,6 +250,9 @@ type Client interface {
 
 	// GetAppLogById 按id获取应用日志
 	GetAppLogById(context.Context, *pb.GetAppLogByIdRequest) (*pb.GetAppLogByIdResponse, error)
+
+	// Command 执行命令
+	Command(context.Context, *pb.CommandRequest) (*pb.CommandResponse, error)
 }
 
 // NewClient instantiates Dapr client using DAPR_GRPC_PORT environment variable as port.
@@ -309,7 +312,7 @@ func NewClientWithAddressContext(ctx context.Context, address string, opts ...Cl
 	if address == "" {
 		return nil, errors.New("empty address")
 	}
-	logger.Printf("dapr client initializing for: %s", address)
+	//logger.Printf("dapr client initializing for: %s", address)
 
 	timeoutSeconds, err := getClientTimeoutSeconds()
 	if err != nil {
