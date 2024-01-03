@@ -125,6 +125,15 @@ func (r *ActorRunTimeContext) InvokeTimer(ctx context.Context, actorTypeName, ac
 	return mng.InvokeTimer(ctx, actorID, timerName, params)
 }
 
+// SetDrainOngingCallTimeout
+//
+//	@Description: liuxd
+//	@receiver r
+//	@param v
+func (r *ActorRunTimeContext) Config() *api.ActorRuntimeConfig {
+	return &r.config
+}
+
 // Deprecated: use ActorRunTimeContext instead.
 func (r *ActorRunTime) RegisterActorFactory(f actor.Factory, opt ...config.Option) {
 	r.ctx.RegisterActorFactory(func() actor.ServerContext { return f().WithContext() }, opt...)
