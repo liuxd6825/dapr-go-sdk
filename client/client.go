@@ -339,7 +339,7 @@ func NewClientWithAddressContext(ctx context.Context, address string, opts ...Cl
 		option,
 		grpc.WithUserAgent(userAgent()),
 		grpc.WithBlock(),
-		grpc.WithDefaultCallOptions(grpc.MaxCallRecvMsgSize(1024*12024*DefaultMaxCallRecvMsgSize)),
+		grpc.WithDefaultCallOptions(grpc.MaxCallRecvMsgSize(1024*1024*DefaultMaxCallRecvMsgSize)),
 	)
 	cancel()
 	if err != nil {
