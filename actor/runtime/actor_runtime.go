@@ -68,6 +68,15 @@ func GetActorRuntimeInstanceContext() *ActorRunTimeContext {
 	return actorRuntimeInstanceCtx
 }
 
+// SetDrainOngingCallTimeout
+//
+//	@Description: liuxd
+//	@receiver r
+//	@param v
+func (r *ActorRunTimeContext) Config() *api.ActorRuntimeConfig {
+	return &r.config
+}
+
 // RegisterActorFactory registers the given actor factory from user, and create new actor manager if not exists.
 func (r *ActorRunTimeContext) RegisterActorFactory(f actor.FactoryContext, opt ...config.Option) {
 	conf := config.GetConfigFromOptions(opt...)

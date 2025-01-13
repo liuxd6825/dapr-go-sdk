@@ -57,7 +57,7 @@ func newServer(address string, router *chi.Mux) *Server {
 // Server is the HTTP server wrapping mux many Dapr helpers.
 type Server struct {
 	address        string
-	mux            *chi.Mux
+	mux            Mux
 	httpServer     *http.Server
 	topicRegistrar internal.TopicRegistrar
 	authToken      string
