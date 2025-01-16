@@ -231,6 +231,10 @@ func (s *Server) registerBaseHandler() {
 		w.WriteHeader(http.StatusOK)
 	}
 	s.mux.Put("/actors/{actorType}/{actorId}/method/timer/{timerName}", fTimer)
+
+	s.mux.HandleFunc("/jobs/{name}", func(w http.ResponseWriter, r *http.Request) {
+		println("/jobs/{name}")
+	})
 }
 
 // AddTopicEventHandler appends provided event handler with it's name to the service.

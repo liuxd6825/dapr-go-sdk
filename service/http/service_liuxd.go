@@ -8,13 +8,14 @@ import (
 	"os"
 )
 
-// NewMyService creates new Service.
-func NewMyService(app *iris.Application, httpServer *http.Server) common.Service {
-	return newMyServer(app, httpServer)
+// NewService creates new Service.
+func NewService(app *iris.Application, httpServer *http.Server) common.Service {
+	return newServer(app, httpServer)
 }
 
-func newMyServer(app *iris.Application, httpServer *http.Server) *Server {
+func newServer(app *iris.Application, httpServer *http.Server) *Server {
 	return &Server{
+		address:        httpServer.Addr,
 		httpServer:     httpServer,
 		mux:            NewIrisMux(app),
 		topicRegistrar: make(internal.TopicRegistrar),
@@ -24,4 +25,11 @@ func newMyServer(app *iris.Application, httpServer *http.Server) *Server {
 
 func (s *Server) RegisterBaseHandler() {
 	s.registerBaseHandler()
+}
+
+// Start starts the HTTP handler. Blocks while serving.
+func (s *Server) Start() error {
+	s.registerBaseHandler()
+	return nil
+	//return s.httpServer.ListenAndServe()
 }

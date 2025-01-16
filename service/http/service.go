@@ -16,19 +16,16 @@ package http
 import (
 	"context"
 	"net/http"
-	"os"
 	"time"
-
-	"github.com/go-chi/chi/v5"
 
 	"github.com/dapr/go-sdk/actor"
 	"github.com/dapr/go-sdk/actor/config"
 	"github.com/dapr/go-sdk/actor/runtime"
-	"github.com/dapr/go-sdk/service/common"
 	"github.com/dapr/go-sdk/service/internal"
 )
 
 // NewService creates new Service.
+/*
 func NewService(address string) common.Service {
 	return newServer(address, nil)
 }
@@ -38,6 +35,9 @@ func NewServiceWithMux(address string, mux *chi.Mux) common.Service {
 	return newServer(address, mux)
 }
 
+*/
+
+/*
 func newServer(address string, router *chi.Mux) *Server {
 	if router == nil {
 		router = chi.NewRouter()
@@ -53,6 +53,7 @@ func newServer(address string, router *chi.Mux) *Server {
 		authToken:      os.Getenv(common.AppAPITokenEnvVar),
 	}
 }
+*/
 
 // Server is the HTTP server wrapping mux many Dapr helpers.
 type Server struct {
@@ -73,10 +74,12 @@ func (s *Server) RegisterActorImplFactoryContext(f actor.FactoryContext, opts ..
 }
 
 // Start starts the HTTP handler. Blocks while serving.
+/*
 func (s *Server) Start() error {
 	s.registerBaseHandler()
 	return s.httpServer.ListenAndServe()
 }
+*/
 
 // Stop stops previously started HTTP service with a five second timeout.
 func (s *Server) Stop() error {
