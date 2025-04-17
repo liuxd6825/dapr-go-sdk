@@ -406,6 +406,7 @@ func NewClientWithAddressContext(ctx context.Context, address string) (client Cl
 		grpc.WithBlock(), //nolint:staticcheck
 		authTokenUnaryInterceptor(at),
 		authTokenStreamInterceptor(at),
+		grpc.WithDefaultCallOptions(grpc.MaxCallRecvMsgSize(1024 * 1024 * DefaultMaxCallRecvMsgSize)), //  liuxd
 	}
 
 	if parsedAddress.TLS {
