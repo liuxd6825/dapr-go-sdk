@@ -374,7 +374,7 @@ func NewClientWithAddressContext(ctx context.Context, address string) (client Cl
 	if address == "" {
 		return nil, errors.New("empty address")
 	}
-	logger.Printf("dapr client initializing for: %s", address)
+	//logger.Printf("dapr client initializing for: %s", address)
 
 	timeoutSeconds, err := getClientTimeoutSeconds()
 	if err != nil {
@@ -438,7 +438,7 @@ func NewClientWithSocket(socket string) (client Client, err error) {
 		return nil, errors.New("nil socket")
 	}
 	at := &authToken{}
-	logger.Printf("dapr client initializing for: %s", socket)
+	//logger.Printf("dapr client initializing for: %s", socket)
 	addr := "unix://" + socket
 	conn, err := grpc.Dial( //nolint:staticcheck
 		addr,

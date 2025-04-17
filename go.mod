@@ -1,19 +1,18 @@
 module github.com/dapr/go-sdk
 
-go 1.23.1
+go 1.23.6
 
-toolchain go1.23.4
+toolchain go1.23.8
 
-require (
-	github.com/kataras/iris/v12 v12.2.11
-)
+require github.com/kataras/iris/v12 v12.2.11
+
 require (
 	github.com/dapr/dapr v1.14.1
 	github.com/go-chi/chi/v5 v5.1.0
 	github.com/golang/mock v1.6.0
 	github.com/google/uuid v1.6.0
 	github.com/microsoft/durabletask-go v0.5.0
-	github.com/stretchr/testify v1.9.0
+	github.com/stretchr/testify v1.10.0
 	google.golang.org/grpc v1.68.1
 	google.golang.org/protobuf v1.35.2
 	gopkg.in/yaml.v3 v3.0.1
@@ -31,9 +30,9 @@ require (
 	go.opentelemetry.io/otel v1.32.0 // indirect
 	go.opentelemetry.io/otel/metric v1.32.0 // indirect
 	go.opentelemetry.io/otel/trace v1.32.0 // indirect
-	golang.org/x/net v0.32.0 // indirect
-	golang.org/x/sys v0.28.0 // indirect
-	golang.org/x/text v0.21.0 // indirect
+	golang.org/x/net v0.36.0 // indirect
+	golang.org/x/sys v0.30.0 // indirect
+	golang.org/x/text v0.22.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20241202173237-19429a94021a // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 )
