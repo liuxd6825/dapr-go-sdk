@@ -73,7 +73,7 @@ func (s *Server) RegisterActorImplFactoryContext(f actor.FactoryContext, opts ..
 }
 
 // Start starts the HTTP handler. Blocks while serving.
-func (s *Server) Start() error {
+func (s *Server) Start1() error {
 	s.registerBaseHandler()
 	return s.httpServer.ListenAndServe()
 }
