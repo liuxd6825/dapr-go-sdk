@@ -22,7 +22,7 @@ import (
 )
 
 // conversationRequest object - currently unexported as used in a functions option pattern
-type conversationRequest struct {
+type ConversationRequest struct {
 	name        string
 	inputs      []ConversationInput
 	Parameters  map[string]*anypb.Any
@@ -33,14 +33,14 @@ type conversationRequest struct {
 }
 
 // NewConversationRequest defines a request with a component name and one or more inputs as a slice
-func NewConversationRequest(llmName string, inputs []ConversationInput) conversationRequest {
-	return conversationRequest{
+func NewConversationRequest(llmName string, inputs []ConversationInput) ConversationRequest {
+	return ConversationRequest{
 		name:   llmName,
 		inputs: inputs,
 	}
 }
 
-type conversationRequestOption func(request *conversationRequest)
+type ConversationRequestOption func(request *ConversationRequest)
 
 // ConversationInput defines a single input.
 type ConversationInput struct {
@@ -65,42 +65,42 @@ type ConversationResult struct {
 }
 
 // WithParameters should be used to provide parameters for custom fields.
-func WithParameters(parameters map[string]*anypb.Any) conversationRequestOption {
-	return func(o *conversationRequest) {
+func WithParameters(parameters map[string]*anypb.Any) ConversationRequestOption {
+	return func(o *ConversationRequest) {
 		o.Parameters = parameters
 	}
 }
 
 // WithMetadata used to define metadata to be passed to components.
-func WithMetadata(metadata map[string]string) conversationRequestOption {
-	return func(o *conversationRequest) {
+func WithMetadata(metadata map[string]string) ConversationRequestOption {
+	return func(o *ConversationRequest) {
 		o.Metadata = metadata
 	}
 }
 
 // WithContextID to provide a new context or continue an existing one.
-func WithContextID(id string) conversationRequestOption {
-	return func(o *conversationRequest) {
+func WithContextID(id string) ConversationRequestOption {
+	return func(o *ConversationRequest) {
 		o.ContextID = &id
 	}
 }
 
 // WithScrubPII to define whether the outputs should have PII removed.
-func WithScrubPII(scrub bool) conversationRequestOption {
-	return func(o *conversationRequest) {
+func WithScrubPII(scrub bool) ConversationRequestOption {
+	return func(o *ConversationRequest) {
 		o.ScrubPII = &scrub
 	}
 }
 
 // WithTemperature to specify which way the LLM leans.
-func WithTemperature(temp float64) conversationRequestOption {
-	return func(o *conversationRequest) {
+func WithTemperature(temp float64) ConversationRequestOption {
+	return func(o *ConversationRequest) {
 		o.Temperature = &temp
 	}
 }
 
 // ConverseAlpha1 can invoke an LLM given a request created by the NewConversationRequest function.
-func (c *GRPCClient) ConverseAlpha1(ctx context.Context, req conversationRequest, options ...conversationRequestOption) (*ConversationResponse, error) {
+func (c *GRPCClient) ConverseAlpha1(ctx context.Context, req *ConversationRequest, options ...ConversationRequestOption) (*ConversationResponse, error) {
 	cinputs := make([]*runtimev1pb.ConversationInput, len(req.inputs))
 	for i, in := range req.inputs {
 		cinputs[i] = &runtimev1pb.ConversationInput{
@@ -112,7 +112,7 @@ func (c *GRPCClient) ConverseAlpha1(ctx context.Context, req conversationRequest
 
 	for _, opt := range options {
 		if opt != nil {
-			opt(&req)
+			opt(req)
 		}
 	}
 
