@@ -10,6 +10,7 @@ github.com/dapr/dapr v1.15.0-rc.17 h1:bR0rd4FH81IteuOHTWVNyl58ZuQTDp3DYaTtXnpZ6J
 github.com/dapr/dapr v1.15.0-rc.17/go.mod h1:SD0AXom2XpX7pr8eYlbJ+gHfNREsflsrzCR19AZJ7/Q=
 github.com/dapr/durabletask-go v0.6.3 h1:WHhSAw1YL4xneK3Jo5nGfmMaJxfFodIIF5q1rpkDDfs=
 github.com/dapr/durabletask-go v0.6.3/go.mod h1:nTZ5fCbJLnZbVdi6Z2YxdDF1OgQZL3LroogGuetrwuA=
+github.com/dapr/durabletask-go v0.6.5/go.mod h1:nTZ5fCbJLnZbVdi6Z2YxdDF1OgQZL3LroogGuetrwuA=
 github.com/dapr/kit v0.15.0 h1:446jrEOQV/0rt6FwmoKrifP3vav5+Uh/u38DqU8q+JM=
 github.com/dapr/kit v0.15.0/go.mod h1:HwFsBKEbcyLanWlDZE7u/jnaDCD/tU+n3pkFNUctQNw=
 github.com/dapr/kit v0.15.1/go.mod h1:HwFsBKEbcyLanWlDZE7u/jnaDCD/tU+n3pkFNUctQNw=

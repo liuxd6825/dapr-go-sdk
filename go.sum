@@ -20,6 +20,7 @@ github.com/cenkalti/backoff/v4 v4.3.0 h1:MyRJ/UdXutAwSAT+s3wNd7MfTIcy71VQueUuFK3
 github.com/cenkalti/backoff/v4 v4.3.0/go.mod h1:Y3VNntkOUPxTVeUxJ/G5vcM//AlwfmyYozVcomhLiZE=
 github.com/dapr/durabletask-go v0.6.3 h1:WHhSAw1YL4xneK3Jo5nGfmMaJxfFodIIF5q1rpkDDfs=
 github.com/dapr/durabletask-go v0.6.3/go.mod h1:nTZ5fCbJLnZbVdi6Z2YxdDF1OgQZL3LroogGuetrwuA=
+github.com/dapr/durabletask-go v0.6.5/go.mod h1:nTZ5fCbJLnZbVdi6Z2YxdDF1OgQZL3LroogGuetrwuA=
 github.com/dapr/kit v0.15.1 h1:WInC8IBveslveCBE2DDeaXh62Si4Wr2Fdv2yJ/7hrDQ=
 github.com/dapr/kit v0.15.1/go.mod h1:HwFsBKEbcyLanWlDZE7u/jnaDCD/tU+n3pkFNUctQNw=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

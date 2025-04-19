@@ -6,5 +6,6 @@ import (
 )
 
 func (c *GRPCClient) Command(ctx context.Context, in *pb.CommandRequest) (*pb.CommandResponse, error) {
-	return c.protoClient.Command(c.withAuthToken(ctx), in)
+	//return c.protoClient.Command(c.withAuthToken(ctx), in)
+	return nil, nil
 }

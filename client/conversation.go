@@ -104,7 +104,7 @@ func (c *GRPCClient) ConverseAlpha1(ctx context.Context, req *ConversationReques
 	cinputs := make([]*runtimev1pb.ConversationInput, len(req.inputs))
 	for i, in := range req.inputs {
 		cinputs[i] = &runtimev1pb.ConversationInput{
-			Message:  in.Content,
+			Content:  in.Content,
 			Role:     in.Role,
 			ScrubPII: in.ScrubPII,
 		}
