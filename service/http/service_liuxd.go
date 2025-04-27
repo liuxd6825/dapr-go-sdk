@@ -3,6 +3,7 @@ package http
 import (
 	"github.com/dapr/go-sdk/service/common"
 	"github.com/dapr/go-sdk/service/internal"
+	"github.com/go-chi/chi/v5"
 	"github.com/kataras/iris/v12"
 	"net/http"
 	"os"
@@ -14,10 +15,11 @@ func NewIrisService(app *iris.Application, httpServer *http.Server) common.Servi
 }
 
 func newIrisServer(app *iris.Application, httpServer *http.Server) *Server {
+	router := chi.NewRouter()
 	return &Server{
 		address:        httpServer.Addr,
 		httpServer:     httpServer,
-		mux:            NewIrisMux(app),
+		mux:            router,
 		topicRegistrar: make(internal.TopicRegistrar),
 		authToken:      os.Getenv(common.AppAPITokenEnvVar),
 	}
